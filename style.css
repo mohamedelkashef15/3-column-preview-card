@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --light-white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+  /* font-family: 'Big Shoulders Display', sans-serif; */
+  background-color: var(--light-gray);
+}
+
+/* Main Style */
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+#car-types .row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  height: 100vh
+}
+
+#car-types .row .col:first-child {
+  background-color: var(--orange);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#car-types .row .col:nth-child(2) {
+  background-color: var(--dark-cyan);
+}
+
+#car-types .row .col:last-child {
+  background-color: var(--very-dark-cyan);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* btns */
+#car-types .row .col:first-child .btn {
+  color: var(--orange);
+  border: 1px solid var(--light-gray);
+}
+
+#car-types .row .col:nth-child(2) .btn {
+  color: var(--dark-cyan);
+  border: 1px solid var(--light-gray);
+}
+
+#car-types .row .col:last-child .btn {
+  color: var(--very-dark-cyan);
+  border: 1px solid var(--light-gray);
+}
+
+#car-types .row .col:first-child .btn:hover,
+#car-types .row .col:nth-child(2) .btn:hover,
+#car-types .row .col:last-child .btn:hover {
+  background-color: transparent;
+  color: var(--light-gray);
+}
+
+#car-types .row .col {
+  padding: 45px;
+}
+
+#car-types .row .col h2 {
+  font-size: 30px;
+  margin: 30px 0;
+  font-family: 'Big Shoulders Display', sans-serif;
+  color: var(--light-gray);
+}
+
+#car-types .row .col p {
+  margin-bottom: 6rem;
+  color: var(--light-white);
+  line-height: 1.6;
+}
+
+#car-types .row .col .btn {
+  background-color: var(--light-gray);
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 20px;
+}

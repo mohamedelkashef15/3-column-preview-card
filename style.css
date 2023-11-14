@@ -18,7 +18,6 @@
 body {
   font-size: 15px;
   font-family: 'Lexend Deca', sans-serif;
-  /* font-family: 'Big Shoulders Display', sans-serif; */
   background-color: var(--light-gray);
 }
 
@@ -26,6 +25,8 @@ body {
 .container {
   max-width: 900px;
   margin: auto;
+  /* for responsive */
+  padding: 0 2rem;
 }
 
 #car-types .row {
@@ -33,7 +34,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   align-items: center;
-  height: 100vh
+  height: 100vh;
 }
 
 #car-types .row .col:first-child {
@@ -97,4 +98,26 @@ body {
   text-decoration: none;
   padding: 12px 25px;
   border-radius: 20px;
+}
+
+/* Responsive Desgin */
+@media (max-width: 800px) {
+  .container {
+    padding: 5rem 2rem;
+  }
+
+  #car-types .row {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  #car-types .row .col:first-child {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+  }
+
+  #car-types .row .col:last-child {
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+  }
 }
